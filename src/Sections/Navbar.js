@@ -75,9 +75,8 @@ const Navbar = () => {
                 </li>
               ) : (
                 <li class="nav-item">
-                  <a
+                  <div
                     class="nav-link mx-2"
-                    href="#"
                     style={{
                       fontSize: '20px',
                       position: 'relative',
@@ -102,7 +101,7 @@ const Navbar = () => {
                     >
                       {username}
                     </span>
-                  </a>
+                  </div>
                   <button
                     type="button"
                     class="btn btn-secondary m-1 btn-sm btn-floating"

@@ -18,16 +18,15 @@ const Cart = () => {
         if (foundItem) {
           result += foundItem.price * Number(itemCount.count)
         }
+        return null
       })
     }
-
-    console.log(result)
     return result
   }
 
   useEffect(() => {
     setSubTotal(getSubTotal().toFixed(2))
-  }, [cartItemCount, data, cart])
+  }, [cartItemCount, data, cart, getSubTotal])
 
   return (
     <div

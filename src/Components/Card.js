@@ -58,9 +58,9 @@ const Card = ({ data }) => {
             Add to cart
           </div>
           <Link to={`/products/${id}`}>
-            <a href="#" class="btn m-2 btn-light btn-lg btn-floating fs-6">
+            <div class="btn m-2 btn-light btn-lg btn-floating fs-6">
               More info
-            </a>
+            </div>
           </Link>
         </div>
       </div>

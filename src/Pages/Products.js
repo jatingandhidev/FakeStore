@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Card from '../Components/Card'
 import { useGlobalContext } from '../context'
 import { FaSearch } from 'react-icons/fa'
@@ -53,6 +53,7 @@ const Products = () => {
               ) {
                 return <Card key={item.id} data={item} />
               }
+              return null
             })
           : data.map((item) => {
               if (
@@ -61,6 +62,7 @@ const Products = () => {
               ) {
                 return <Card key={item.id} data={item} />
               }
+              return null
             })}
       </div>
     </div>

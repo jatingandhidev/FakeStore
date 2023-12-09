@@ -18,7 +18,7 @@ const CartItem = ({
 
     // Update count state with the new value
     setCount(Number(itemCount) || 1)
-  }, [cartItemCount])
+  }, [cartItemCount, id])
   return (
     <div className="card rounded-3 mb-4">
       <div className="card-body p-4">

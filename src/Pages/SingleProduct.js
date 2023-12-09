@@ -23,7 +23,12 @@ const SingleProduct = () => {
                   <div className="col-md-6">
                     <div className="images p-3">
                       <div className="text-center p-4">
-                        <img id="main-image" src={product.image} width="250" />
+                        <img
+                          id="main-image"
+                          src={product.image}
+                          alt="product"
+                          width="250"
+                        />
                       </div>
                     </div>
                   </div>

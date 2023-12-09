@@ -91,6 +91,7 @@ const Home = () => {
             ) {
               return <Card key={item.id} data={item} />
             }
+            return null
           })}
         </div>
       </div>
