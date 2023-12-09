@@ -1,8 +1,8 @@
-import React from 'react'
 import Card from '../Components/Card'
-const count = [1, 2, 3, 4, 5, 6]
+import { useGlobalContext } from '../context'
 
 const Home = () => {
+  const { data } = useGlobalContext()
   return (
     <>
       {/* Header Slider */}
@@ -84,8 +84,13 @@ const Home = () => {
       {/* Cards */}
       <div class="container mx-auto mt-4">
         <div class="row">
-          {count.map((index) => {
-            return <Card />
+          {data.map((item) => {
+            if (
+              item.category !== 'electronics' &&
+              item.category !== 'jewelery'
+            ) {
+              return <Card key={item.id} data={item} />
+            }
           })}
         </div>
       </div>

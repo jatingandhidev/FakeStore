@@ -1,10 +1,37 @@
+import React, { useState } from 'react'
+import { FaShoppingCart } from 'react-icons/fa'
+import { FaCircleUser } from 'react-icons/fa6'
+import { LuShoppingBag } from 'react-icons/lu'
+import { useGlobalContext } from '../context'
+
 const Navbar = () => {
+  const { cart } = useGlobalContext()
+  const [isHovered, setIsHovered] = useState(false)
+
+  const handleMouseEnter = () => {
+    setIsHovered(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovered(false)
+  }
+
+  let userLoggedIn = false
+  let username
+
+  if (localStorage.getItem('loggedInUser')) {
+    let value = localStorage.getItem('loggedInUser')
+    value = value.split(',')
+
+    username = value[0]
+    userLoggedIn = true
+  }
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            Gadgetize
+          <a class="navbar-brand" href="/">
+            Fake Store <LuShoppingBag />
           </a>
           <button
             class="navbar-toggler"
@@ -31,14 +58,81 @@ const Navbar = () => {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-2" href="#">
+                <a class="nav-link mx-2" href="/employees">
                   Employees
                 </a>
               </li>
+              {!userLoggedIn ? (
+                <li class="nav-item">
+                  <button
+                    type="button"
+                    class="btn btn-secondary m-1 btn-sm btn-floating"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal"
+                  >
+                    Login
+                  </button>
+                </li>
+              ) : (
+                <li class="nav-item">
+                  <a
+                    class="nav-link mx-2"
+                    href="#"
+                    style={{
+                      fontSize: '20px',
+                      position: 'relative',
+                      display: 'inline',
+                    }}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <FaCircleUser />
+                    <span
+                      style={{
+                        display: isHovered ? 'block' : 'none',
+                        position: 'absolute',
+                        top: '100%',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        backgroundColor: '#333',
+                        color: '#fff',
+                        padding: '5px',
+                        borderRadius: '3px',
+                      }}
+                    >
+                      {username}
+                    </span>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn btn-secondary m-1 btn-sm btn-floating"
+                    onClick={() => {
+                      localStorage.removeItem('loggedInUser')
+                      window.location.reload()
+                    }}
+                  >
+                    Logout
+                  </button>
+                </li>
+              )}
+
               <li class="nav-item">
-                <a class="nav-link mx-2" href="#">
-                  Cart
-                </a>
+                <button
+                  type="button"
+                  class="btn m-1  btn-light btn-sm btn-floating position-relative"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasBottom"
+                  aria-controls="offcanvasBottom"
+                >
+                  Cart <FaShoppingCart />
+                  {cart.length > 0 ? (
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+                      {cart.length}
+                    </span>
+                  ) : (
+                    ''
+                  )}
+                </button>
               </li>
             </ul>
           </div>

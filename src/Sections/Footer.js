@@ -39,9 +39,9 @@ const Footer = () => {
         </div>
 
         <div className="text-center text-white p-3 bg-dark" style={buttonStyle}>
-          © 2020 Copyright:
-          <a className="text-white" href="https://mdbootstrap.com/">
-            MDBootstrap.com
+          © 2023 Copyright:
+          <a className="text-white" href="https://fakestoreapi.com/">
+            fakestoreapi.com
           </a>
         </div>
       </footer>
