@@ -7,26 +7,25 @@ const Cart = () => {
   const { data, cart, removeFromCart, updateCartItemCount, cartItemCount } =
     useGlobalContext()
 
-  const getSubTotal = () => {
-    let result = 0
-
-    if (data && data.length > 0) {
-      Object.keys(cartItemCount)?.map((key, index) => {
-        const itemCount = cartItemCount[key]
-        const foundItem = data.find((item) => item.id === itemCount.id)
-
-        if (foundItem) {
-          result += foundItem.price * Number(itemCount.count)
-        }
-        return null
-      })
-    }
-    return result
-  }
-
   useEffect(() => {
+    const getSubTotal = () => {
+      let result = 0
+
+      if (data && data.length > 0) {
+        Object.keys(cartItemCount)?.map((key, index) => {
+          const itemCount = cartItemCount[key]
+          const foundItem = data.find((item) => item.id === itemCount.id)
+
+          if (foundItem) {
+            result += foundItem.price * Number(itemCount.count)
+          }
+          return null
+        })
+      }
+      return result
+    }
     setSubTotal(getSubTotal().toFixed(2))
-  }, [cartItemCount, data, cart, getSubTotal])
+  }, [cartItemCount, data, cart])
 
   return (
     <div
