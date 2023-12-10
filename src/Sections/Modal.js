@@ -105,7 +105,7 @@ const Modal = () => {
     <div
       className="modal fade"
       id="loginModal"
-      tabindex="-1"
+      tabIndex="-1"
       aria-labelledby="loginModal"
       aria-hidden="true"
     >

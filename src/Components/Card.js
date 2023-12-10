@@ -7,14 +7,14 @@ const Card = ({ data }) => {
   const { addToCart } = useGlobalContext()
   return (
     <div
-      class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 position-relative"
+      className="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 position-relative"
       style={{
         marginTop: '150px',
         marginBottom: '100px',
       }}
     >
       <div
-        class="card top-50 start-50 translate-middle bg-dark bg-gradient"
+        className="card top-50 start-50 translate-middle bg-dark bg-gradient"
         style={{
           width: '18rem',
           color: 'white',
@@ -23,7 +23,7 @@ const Card = ({ data }) => {
         }}
       >
         <div
-          class="card-img-top"
+          className="card-img-top"
           style={{
             width: '288px',
             height: '288px',
@@ -42,23 +42,23 @@ const Card = ({ data }) => {
             border: '2px solid white',
           }}
         />
-        <div class="card-body" style={{ marginTop: '144px' }}>
-          <h5 class="card-title">{title}</h5>
-          <h6 class="card-subtitle mb-2" style={{ color: 'lightgrey' }}>
+        <div className="card-body" style={{ marginTop: '144px' }}>
+          <h5 className="card-title">{title}</h5>
+          <h6 className="card-subtitle mb-2" style={{ color: 'lightgrey' }}>
             ${price}
           </h6>
-          <p class="card-text">
+          <p className="card-text">
             {description.split(' ').slice(0, 15).join(' ')}...
           </p>
           <div
             href=""
-            class="btn m-2 btn-light btn-lg btn-floating fs-6"
+            className="btn m-2 btn-light btn-lg btn-floating fs-6"
             onClick={() => addToCart(id)}
           >
             Add to cart
           </div>
           <Link to={`/products/${id}`}>
-            <div class="btn m-2 btn-light btn-lg btn-floating fs-6">
+            <div className="btn m-2 btn-light btn-lg btn-floating fs-6">
               More info
             </div>
           </Link>

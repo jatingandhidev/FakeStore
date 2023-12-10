@@ -28,13 +28,13 @@ const Navbar = () => {
   }
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3 fixed-top">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
             Fake Store <LuShoppingBag />
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavDropdown"
@@ -42,31 +42,35 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto ">
-              <li class="nav-item">
-                <a class="nav-link mx-2 active" aria-current="page" href="/">
+          <div className=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav ms-auto ">
+              <li className="nav-item">
+                <a
+                  className="nav-link mx-2 active"
+                  aria-current="page"
+                  href="/"
+                >
                   Home
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2" href="/products">
+              <li className="nav-item">
+                <a className="nav-link mx-2" href="/products">
                   Products
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2" href="/employees">
+              <li className="nav-item">
+                <a className="nav-link mx-2" href="/employees">
                   Employees
                 </a>
               </li>
               {!userLoggedIn ? (
-                <li class="nav-item">
+                <li className="nav-item">
                   <button
                     type="button"
-                    class="btn btn-secondary m-1 btn-sm btn-floating"
+                    className="btn btn-secondary m-1 btn-sm btn-floating"
                     data-bs-toggle="modal"
                     data-bs-target="#loginModal"
                   >
@@ -74,9 +78,9 @@ const Navbar = () => {
                   </button>
                 </li>
               ) : (
-                <li class="nav-item">
+                <li className="nav-item">
                   <div
-                    class="nav-link mx-2"
+                    className="nav-link mx-2"
                     style={{
                       fontSize: '20px',
                       position: 'relative',
@@ -104,7 +108,7 @@ const Navbar = () => {
                   </div>
                   <button
                     type="button"
-                    class="btn btn-secondary m-1 btn-sm btn-floating"
+                    className="btn btn-secondary m-1 btn-sm btn-floating"
                     onClick={() => {
                       localStorage.removeItem('loggedInUser')
                       window.location.reload()
@@ -115,17 +119,17 @@ const Navbar = () => {
                 </li>
               )}
 
-              <li class="nav-item">
+              <li className="nav-item">
                 <button
                   type="button"
-                  class="btn m-1  btn-light btn-sm btn-floating position-relative"
+                  className="btn m-1  btn-light btn-sm btn-floating position-relative"
                   data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasBottom"
                   aria-controls="offcanvasBottom"
                 >
                   Cart <FaShoppingCart />
                   {cart.length > 0 ? (
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
                       {cart.length}
                     </span>
                   ) : (

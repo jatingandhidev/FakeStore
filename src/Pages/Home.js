@@ -82,8 +82,8 @@ const Home = () => {
         </button>
       </div>
       {/* Cards */}
-      <div class="container mx-auto mt-4">
-        <div class="row">
+      <div className="container mx-auto mt-4">
+        <div className="row">
           {data.map((item) => {
             if (
               item.category !== 'electronics' &&

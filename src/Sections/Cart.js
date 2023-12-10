@@ -29,24 +29,24 @@ const Cart = () => {
 
   return (
     <div
-      class="offcanvas offcanvas-bottom"
-      tabindex="-1"
+      className="offcanvas offcanvas-bottom"
+      tabIndex="-1"
       id="offcanvasBottom"
       aria-labelledby="offcanvasBottomLabel"
       style={{ height: '100vh' }}
     >
-      <div class="offcanvas-header" style={{ background: 'silver' }}>
-        <h5 class="offcanvas-title" id="offcanvasBottomLabel">
+      <div className="offcanvas-header" style={{ background: 'silver' }}>
+        <h5 className="offcanvas-title" id="offcanvasBottomLabel">
           Cart
         </h5>
         <button
           type="button"
-          class="btn-close text-reset"
+          className="btn-close text-reset"
           data-bs-dismiss="offcanvas"
           aria-label="Close"
         ></button>
       </div>
-      <div class="offcanvas-body small" style={{ background: 'lightgrey' }}>
+      <div className="offcanvas-body small" style={{ background: 'lightgrey' }}>
         <section
           className="h-auto"
           style={{ backgroundColor: '#eee', minHeight: '90vh' }}
@@ -58,6 +58,7 @@ const Cart = () => {
                   cart.map((id) => {
                     return (
                       <CartItem
+                        key={id}
                         data={data}
                         removeFromCart={removeFromCart}
                         id={id}
