@@ -23,6 +23,7 @@ const Employees = () => {
 
   const handleEdit = (user, key) => {
     // Set the selected user and open the modal for editing
+    console.log(user)
     setSelectedUser(user)
     setSelectedKey(key)
   }

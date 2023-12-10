@@ -28,7 +28,8 @@ export const Functions = () => {
 
   const getFromCart = () => {
     const cartItemIDs = JSON.parse(localStorage.getItem('cartItemIDs'))
-    if (cartItemIDs) {
+
+    if (cartItemIDs.length > 0) {
       setCart(cartItemIDs)
     } else {
       setCart([])

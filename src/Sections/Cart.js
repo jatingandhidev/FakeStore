@@ -46,7 +46,7 @@ const Cart = () => {
         ></button>
       </div>
       <div className="offcanvas-body small" style={{ background: 'lightgrey' }}>
-        <section
+        <div
           className="h-auto"
           style={{ backgroundColor: '#eee', minHeight: '90vh' }}
         >
@@ -95,7 +95,7 @@ const Cart = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   )
