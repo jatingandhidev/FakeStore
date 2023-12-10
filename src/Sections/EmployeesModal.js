@@ -187,27 +187,27 @@ const EmployeesModal = ({
 
   return (
     <div
-      class="modal fade"
+      className="modal fade"
       id="formModal"
-      tabindex="-1"
+      tabIndex="-1"
       aria-labelledby="formModal"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header" style={{ background: 'silver' }}>
+      <div className="modal-dialog modal-xl">
+        <div className="modal-content">
+          <div className="modal-header" style={{ background: 'silver' }}>
             <button
               type="button"
-              class="btn-close"
+              className="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
               onClick={() => setSelectedUser(null)}
             ></button>
           </div>
-          <div class="modal-body" style={{ background: 'lightgrey' }}>
-            <form class="row g-3" style={{ fontWeight: 'bold' }}>
-              <div class="col-md-6">
-                <label for="firstName" class="form-label">
+          <div className="modal-body" style={{ background: 'lightgrey' }}>
+            <form className="row g-3" style={{ fontWeight: 'bold' }}>
+              <div className="col-md-6">
+                <label htmlFor="firstName" className="form-label">
                   First Name
                 </label>
                 <span
@@ -223,14 +223,14 @@ const EmployeesModal = ({
                 </span>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="firstName"
                   value={firstName}
                   onChange={handleInputChange}
                 />
               </div>
-              <div class="col-md-6">
-                <label for="lastName" class="form-label">
+              <div className="col-md-6">
+                <label htmlFor="lastName" className="form-label">
                   Last Name
                 </label>
                 <span
@@ -246,14 +246,14 @@ const EmployeesModal = ({
                 </span>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="lastName"
                   value={lastName}
                   onChange={handleInputChange}
                 />
               </div>
-              <div class="col-md-6">
-                <label for="EmpID" class="form-label">
+              <div className="col-md-6">
+                <label htmlFor="EmpID" className="form-label">
                   Employee ID
                 </label>
                 <span
@@ -269,14 +269,14 @@ const EmployeesModal = ({
                 </span>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="EmpID"
                   value={empID}
                   onChange={handleInputChange}
                 />
               </div>
-              <div class="col-md-6">
-                <label for="Designation" class="form-label">
+              <div className="col-md-6">
+                <label htmlFor="Designation" className="form-label">
                   Designation
                 </label>
                 <span
@@ -292,14 +292,14 @@ const EmployeesModal = ({
                 </span>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="Designation"
                   value={designation}
                   onChange={handleInputChange}
                 />
               </div>
-              <div class="col-md-6">
-                <label for="Salary" class="form-label">
+              <div className="col-md-6">
+                <label htmlFor="Salary" className="form-label">
                   Salary
                 </label>
                 <span
@@ -315,7 +315,7 @@ const EmployeesModal = ({
                 </span>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="Salary"
                   value={salary}
                   onChange={handleInputChange}
@@ -323,10 +323,10 @@ const EmployeesModal = ({
               </div>
             </form>
           </div>
-          <div class="modal-footer" style={{ background: 'silver' }}>
+          <div className="modal-footer" style={{ background: 'silver' }}>
             <button
               type="button"
-              class="btn btn-secondary"
+              className="btn btn-secondary"
               data-bs-dismiss="modal"
               onClick={() => setSelectedUser(null)}
             >
@@ -335,7 +335,7 @@ const EmployeesModal = ({
             {selectedUser ? (
               <button
                 type="button"
-                class="btn m-1 btn-dark text-white btn-floating"
+                className="btn m-1 btn-dark text-white btn-floating"
                 onClick={handleUpdateChanges}
               >
                 Update
@@ -343,7 +343,7 @@ const EmployeesModal = ({
             ) : (
               <button
                 type="button"
-                class="btn m-1 btn-dark text-white btn-floating"
+                className="btn m-1 btn-dark text-white btn-floating"
                 onClick={handleSaveChanges}
               >
                 Save changes

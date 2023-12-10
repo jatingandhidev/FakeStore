@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../Context API/context'
 
 const Card = ({ data }) => {
   const { title, price, description, image, id } = data

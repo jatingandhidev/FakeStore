@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
 import { FaCircleUser } from 'react-icons/fa6'
 import { LuShoppingBag } from 'react-icons/lu'
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../Context API/context'
 
 const Navbar = () => {
   const { cart } = useGlobalContext()

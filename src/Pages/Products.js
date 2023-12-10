@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Card from '../Components/Card'
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../Context API/context'
 import { FaSearch } from 'react-icons/fa'
 
 const Products = () => {

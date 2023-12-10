@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../Context API/context'
 
 const SingleProduct = () => {
   const { id } = useParams()

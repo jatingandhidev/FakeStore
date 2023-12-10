@@ -1,11 +1,10 @@
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../Context API/context'
 import CartItem from '../Components/CartItem'
 import { useEffect, useState } from 'react'
 
 const Cart = () => {
   const [subTotal, setSubTotal] = useState(0)
-  const { data, cart, removeFromCart, updateCartItemCount, cartItemCount } =
-    useGlobalContext()
+  const { data, cart, cartItemCount } = useGlobalContext()
 
   useEffect(() => {
     const getSubTotal = () => {
@@ -60,9 +59,7 @@ const Cart = () => {
                       <CartItem
                         key={id}
                         data={data}
-                        removeFromCart={removeFromCart}
                         id={id}
-                        updateCartItemCount={updateCartItemCount}
                         cartItemCount={cartItemCount}
                       />
                     )

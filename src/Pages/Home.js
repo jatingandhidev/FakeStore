@@ -1,5 +1,5 @@
 import Card from '../Components/Card'
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../Context API/context'
 
 const Home = () => {
   const { data } = useGlobalContext()

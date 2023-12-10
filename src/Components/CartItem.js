@@ -2,15 +2,17 @@ import { MdDelete } from 'react-icons/md'
 import { IoIosArrowDropleft } from 'react-icons/io'
 import { IoIosArrowDropright } from 'react-icons/io'
 import { useEffect, useState } from 'react'
+import { useGlobalContext } from '../Context API/context'
 
 const CartItem = ({
   data,
-  removeFromCart,
+
   id,
-  updateCartItemCount,
+
   cartItemCount,
 }) => {
   const [count, setCount] = useState(1)
+  const { removeFromCart, updateCartItemCount } = useGlobalContext()
   useEffect(() => {
     const itemCount = Object.keys(cartItemCount)
       .filter((key) => cartItemCount[key].id === id)
