@@ -33,29 +33,91 @@ const Home = () => {
             aria-label="Slide 3"
           ></button>
         </div>
-        <div className="carousel-inner  " style={{ maxHeight: '100vh' }}>
-          <div className="carousel-item active">
+
+        <div className="carousel-inner" style={{ height: '100vh' }}>
+          <div
+            className="carousel-item active"
+            style={{ position: 'relative' }}
+          >
             <img
-              src="https://wallpapers.com/images/hd/high-resolution-black-background-j5zkhfwgqgsw2olf.jpg"
-              className="d-block w-100 "
-              alt="..."
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src="https://wallpapers.com/images/hd/high-resolution-black-background-j5zkhfwgqgsw2olf.jpg"
+              src={process.env.PUBLIC_URL + '/imgs/Black.jpg'}
               className="d-block w-100"
-              alt="..."
+              style={{ height: '100vh' }}
+              alt="First Slide"
             />
+            <div
+              style={{
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
+                color: 'white',
+              }}
+            >
+              <img
+                src={process.env.PUBLIC_URL + '/imgs/img1.jpg'}
+                alt="Clothing Image 1"
+                className="img-fluid rounded "
+                style={{ height: '90%', width: '90%' }}
+              />
+            </div>
           </div>
-          <div className="carousel-item">
+          <div
+            className="carousel-item active"
+            style={{ position: 'relative' }}
+          >
             <img
-              src="https://wallpapers.com/images/hd/high-resolution-black-background-j5zkhfwgqgsw2olf.jpg"
+              src={process.env.PUBLIC_URL + '/imgs/Black.jpg'}
               className="d-block w-100"
-              alt="..."
+              style={{ height: '100vh' }}
+              alt="First Slide"
             />
+            <div
+              style={{
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
+                color: 'white',
+              }}
+            >
+              <img
+                src={process.env.PUBLIC_URL + '/imgs/img2.webp'}
+                alt="Clothing Image 2"
+                className="img-fluid rounded "
+                style={{ height: '90%', width: '90%' }}
+              />
+            </div>
+          </div>
+          <div
+            className="carousel-item active"
+            style={{ position: 'relative' }}
+          >
+            <img
+              src={process.env.PUBLIC_URL + '/imgs/Black.jpg'}
+              className="d-block w-100"
+              style={{ height: '100vh' }}
+              alt="First Slide"
+            />
+            <div
+              style={{
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)',
+                color: 'white',
+              }}
+            >
+              <img
+                src={process.env.PUBLIC_URL + '/imgs/img3.jpg'}
+                alt="Clothing Image 3"
+                className="img-fluid rounded "
+                style={{ height: '90%', width: '90%' }}
+              />
+            </div>
           </div>
         </div>
+
         <button
           className="carousel-control-prev"
           type="button"
