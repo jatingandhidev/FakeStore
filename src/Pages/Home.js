@@ -56,7 +56,7 @@ const Home = () => {
             >
               <img
                 src={process.env.PUBLIC_URL + '/imgs/img1.jpg'}
-                alt="Clothing Image 1"
+                alt="1"
                 className="img-fluid rounded "
                 style={{ height: '90%', width: '90%' }}
               />
@@ -83,7 +83,7 @@ const Home = () => {
             >
               <img
                 src={process.env.PUBLIC_URL + '/imgs/img2.webp'}
-                alt="Clothing Image 2"
+                alt="2"
                 className="img-fluid rounded "
                 style={{ height: '90%', width: '90%' }}
               />
@@ -110,7 +110,7 @@ const Home = () => {
             >
               <img
                 src={process.env.PUBLIC_URL + '/imgs/img3.jpg'}
-                alt="Clothing Image 3"
+                alt="3"
                 className="img-fluid rounded "
                 style={{ height: '90%', width: '90%' }}
               />
